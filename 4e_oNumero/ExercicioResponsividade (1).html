@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex & Responsividade</title>
+    <style>
+
+        /*
+      
+            1. Aplique display flex a tag <body> da página, e assim, faça com que as caixas sejam exibidas em linha e que o espaçamento entre elas seja distribuído de forma igual. 
+            2. Utilizando agora, utilizando as propriedades display flex, flex-wrap e justify-content, faça com que as divs/caixas dentro da tag <body> sejam exibidas em linha e que o 
+                espaçamento entre elas seja distribuído de forma igual.
+            3. Ao diminuir a largura da tela, as caixas se adaptem ao tamanho da tela e ainda mantenham a distância entre elas.
+            4. Cada caixa deve possuir um tamanho mínimo de 20vw de largura e 20vh de altura.
+
+            5. Aplique a transição de 0.5s em TODAS as caixas.
+
+            6. As caixas devem ter as seguintes cores no background:
+            Amarela
+            Vermelha
+            Verde
+            Azul
+
+            7. Ao reduzir o tamanho da tela para 768px, faça com que as caixas ocupem 100% da largura da tela.
+            
+            8. Utilize a propriedade cursor para que o cursor do mouse mude ao passar sobre as caixas.
+
+            9. Utilize a propriedade font-family para que o texto das caixas seja exibido em uma fonte monoespaçada como a Courier.
+
+            BONUS: Ao passar o mouse sobre as caixas, elas devem aumentar de tamanho, criar uma sombra e arredondar as bordas. Utilize as propriedades de transformação (transform), box-shadow e border-radius para isso.  
+
+            Alguns links que podem ajudar: 
+
+            https://www.w3schools.com/
+            https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+            
+        */
+
+        
+
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #335599;
+        }
+
+        .div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: baseline;
+        }
+
+        .box {
+        background: #335599;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5vh;
+        min-width: 20vw;
+        min-height: 20vh;
+        font-family: 'Courier New', Courier, monospace;
+        color: aliceblue;
+        margin-top: 30vh;
+        border-radius: 5vh;
+        cursor: crosshair;
+        }
+
+        .yellow {
+        background-color: rgb(202, 202, 24);
+      }
+      .red {
+        background-color: rgb(202, 12, 12);
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: rgb(16, 16, 110);
+      }
+
+      .yellow:hover {
+        transition: 0.5s;
+        box-shadow: 0 0 100px black;
+        border-radius: 50px;
+        transform: scale(2.0);
+      }
+      .red:hover {
+        background-color: red;
+        transition: 0.3s;
+        box-shadow: 0 0 100px black;
+        border-radius: 50px;
+        transform: scale(2.0);
+      }
+      .green:hover {
+        background-color: green;
+        transition: 0.3s;
+        box-shadow: 0 0 100px black;
+        border-radius: 50px;
+        transform: scale(2.0);
+      }
+      .blue:hover {
+        background-color: blue;
+        transition: 0.3s;
+        box-shadow: 0 0 100px black;
+        border-radius: 50px;
+        transform: scale(2.0);
+      }
+
+    </style>
+</head>
+<body>
+
+
+        <div class="box yellow">
+            <span>
+                Amarela
+            </span>
+        </div>
+        <div class="box red">
+            <span>
+                Vermelha
+            </span>
+        </div>
+    
+
+
+
+
+        <div class="box green">
+            <span>
+                Verde
+            </span>
+        </div>
+        <div class="box blue">
+            <span>
+                Azul
+            </span>
+        </div>
+    
+
+</body>
+</html>
